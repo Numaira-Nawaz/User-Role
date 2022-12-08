@@ -19,4 +19,8 @@ public class RoleController {
     public ResponseDTORole getRoleById(@PathVariable Long id){
         return roleService.findRoleById(id);
     }
+    @DeleteMapping("/deleterole/{id}")
+    public String delete(@PathVariable Long id){
+        return roleService.delete(id);
+    }
 }

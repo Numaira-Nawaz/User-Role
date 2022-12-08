@@ -1,7 +1,5 @@
 package com.example.userandroles.Service;
 
-
-import com.example.userandroles.DTO.ResponseDTORole;
 import com.example.userandroles.DTO.ResponseDTOUser;
 import com.example.userandroles.DTO.RoleDTO;
 import com.example.userandroles.Entities.Role;
@@ -9,10 +7,8 @@ import com.example.userandroles.Entities.User;
 import com.example.userandroles.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -59,5 +55,11 @@ public class UserService {
         user1.setPassword(user.getPassword());
         user1.setRoles(user.getRoles());
         return userRepo.save(user1);
+    }
+    //Delete-a-User
+    public String delete(Long id){
+        User user = userRepo.findById(id).get();
+        userRepo.delete(user);
+        return "Deleted user # "+id;
     }
 }

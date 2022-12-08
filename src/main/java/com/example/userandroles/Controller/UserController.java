@@ -10,7 +10,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping("/user")
+    @PostMapping("/adduser")
     public User addUser(@RequestBody User user){
         return userService.addUser1(user);
     }
@@ -19,7 +19,7 @@ public class UserController {
     public User update(@PathVariable Long id,@RequestBody User user){
         return userService.update(id,user);
     }
-    @GetMapping("/getuser/{id}")
+    @GetMapping("/get-user/{id}")
     public User getUser(@PathVariable Long id){
         return userService.getUser(id);
     }
@@ -29,6 +29,10 @@ public class UserController {
     public ResponseDTOUser findUser(@PathVariable Long id){
         return userService.findUserById(id);
 
+    }
+    @DeleteMapping("/deleteuser/{id}")
+    public String delete(@PathVariable Long id){
+        return userService.delete(id);
     }
 
     /*

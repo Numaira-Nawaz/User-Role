@@ -23,7 +23,7 @@ public class Role {
     private Long id;
     private String role;
     @JsonBackReference
-    @ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.ALL})
+    @ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST})
     @JoinTable(name = "user_roles",joinColumns =
             {@JoinColumn(name = "role_id")},inverseJoinColumns = {@JoinColumn(name = "user_id")})
     private Collection<User> users = new ArrayList<>();
