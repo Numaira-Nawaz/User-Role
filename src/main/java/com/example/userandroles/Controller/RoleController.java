@@ -29,7 +29,7 @@ public class RoleController {
     }
 @PostMapping("/addrolebypermissionid")
     public Role addRoleByPermissionId(@RequestBody Role role){
-
+    System.out.println("//////////////////");
     return roleService.addRoleByPermissionId(role);
 }
 }
