@@ -44,9 +44,9 @@ public class UserService {
         ResponseDTOUser responseDTO = new ResponseDTOUser(user.getId(),user.getName(),user.getPassword(),roles);
         return responseDTO;
     }
-    public User getUser(Long id){
+   /* public User getUser(Long id){
        return userRepo.getUserById(id);
-    }
+    }*/
 
     //update - userl
     public User update(Long id,User user){
@@ -62,4 +62,6 @@ public class UserService {
         userRepo.delete(user);
         return "Deleted user # "+id;
     }
+
+
 }

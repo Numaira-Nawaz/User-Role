@@ -5,18 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ResponseDTORole {
+public class PermissionDTO {
     private Long id;
-    private String role;
-    private List<UserDTO> users;
-    private List<PermissionDTO> permissions;
-
-
+    private String permission;
+    private List<RoleDTO> roleDTOS;
 }
