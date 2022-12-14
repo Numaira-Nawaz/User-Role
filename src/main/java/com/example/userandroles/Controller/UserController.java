@@ -19,10 +19,10 @@ public class UserController {
     public User update(@PathVariable Long id,@RequestBody User user){
         return userService.update(id,user);
     }
-    @GetMapping("/get-user/{id}")
+   /* @GetMapping("/get-user/{id}")
     public User getUser(@PathVariable Long id){
         return userService.getUser(id);
-    }
+    }*/
 
     //GET-USER
     @GetMapping("/user/{id}")
