@@ -14,7 +14,9 @@ public class UserController {
     public User addUser(@RequestBody User user){
         System.out.println("hello");
         System.out.println("The user is added");
+
         System.out.println("hello git");
+
         return userService.addUser1(user);
     }
     //UPDATE-USER
