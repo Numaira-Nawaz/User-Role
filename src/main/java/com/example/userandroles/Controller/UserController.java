@@ -12,7 +12,7 @@ public class UserController {
 
     @PostMapping("/adduser")
     public User addUser(@RequestBody User user){
-        System.out.println("The user is added");
+        
         return userService.addUser1(user);
     }
     //UPDATE-USER
