@@ -13,6 +13,7 @@ public class UserController {
     @PostMapping("/adduser")
     public User addUser(@RequestBody User user){
         System.out.print("Numaira");
+
         return userService.addUser1(user);
     }
     //UPDATE-USER
